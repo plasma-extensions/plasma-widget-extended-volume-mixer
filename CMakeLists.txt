@@ -21,4 +21,3 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Plasma)
 #add_subdirectory(translations)
 
 plasma_install_package(package org.plasma-light.extended-volume-mixer)
-

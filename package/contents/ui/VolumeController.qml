@@ -11,15 +11,10 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 MouseArea {
     id: root
     property bool muted: false
-    property string icon
     property var pulseObject
+    property string iconName: ""
 
     height: layout.implicitHeight
-
-    onIconChanged: {
-        clientIcon.visible = icon ? true : false
-        clientIcon.icon = icon
-    }
 
     ColumnLayout {
         id: layout
@@ -41,7 +36,24 @@ MouseArea {
                     id: contorller
                     Layout.fillWidth: true
 
+                    QIconItem {
+                        id: clientIcon
+
+                        Layout.preferredHeight: slider.height
+                        Layout.preferredWidth: slider.height
+
+                        icon:  iconName !== "" ? iconName : "undefined"
+                        visible: iconName !== ""
+
+                        state: pulseObject && pulseObject.muted ? QIconItem.DisabledState : QIconItem.ActiveState
+                        MouseArea {
+                            anchors.fill: parent
+                            onPressed: pulseObject.muted = !pulseObject.muted
+                        }
+                    }
+
                     VolumeIcon {
+                        visible: !clientIcon.visible
                         Layout.maximumHeight: slider.height
                         Layout.maximumWidth: slider.height
                         volume: pulseObject ? pulseObject.volume : -1

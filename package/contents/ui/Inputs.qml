@@ -20,6 +20,7 @@ Item {
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignVCenter
                 pulseObject: sourceModelProxy.defaultSource
+                iconName: "audio-input"
             }
 
             ExpanderArrow {
