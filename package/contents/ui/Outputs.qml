@@ -3,6 +3,8 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+import '../code/icon.js' as Icon
+
 Item {
     height: content.implicitHeight
     ColumnLayout {
@@ -20,14 +22,15 @@ Item {
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignVCenter
                 pulseObject: sinkModelProxy.defaultSink
+                iconName: sinkModelProxy.defaultSink ? Icon.outputName(sinkModelProxy.defaultSink.volume, sinkModelProxy.defaultSink.muted) : "undefined";
             }
 
             ExpanderArrow {
                 id: expanderIcon
                 Layout.alignment: Qt.AlignVCenter
 
-                implicitHeight: openSettingsButton.implicitHeight
-                implicitWidth: openSettingsButton.implicitWidth
+                implicitHeight: units.iconSizes.medium
+                implicitWidth: units.iconSizes.medium
             }
 
             PlasmaComponents.ToolButton {

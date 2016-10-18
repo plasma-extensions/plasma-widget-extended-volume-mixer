@@ -18,7 +18,7 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-function name(volume, muted) {
+function outputName(volume, muted) {
     // FIXME: hardcoded max value
     var split_base = 65536/3.0;
     var icon = null;
@@ -30,6 +30,22 @@ function name(volume, muted) {
         icon = "audio-volume-medium";
     } else {
         icon = "audio-volume-high";
+    }
+    return icon;
+}
+
+function inputName(volume, muted) {
+    // FIXME: hardcoded max value
+    var split_base = 65536/3.0;
+    var icon = null;
+    if ((volume / split_base <= 0) || muted) {
+        icon = "mic-off";
+    } else if (volume / split_base <= 1) {
+        icon = "microphone-sensitivity-low";
+    } else if (volume / split_base <= 2) {
+        icon = "microphone-sensitivity-medium";
+    } else {
+        icon = "microphone-sensitivity-high";
     }
     return icon;
 }

@@ -13,6 +13,7 @@ MouseArea {
     property bool muted: false
     property var pulseObject
     property string iconName: ""
+    property bool shadeIconWhileMuted: false
 
     height: layout.implicitHeight
 
@@ -45,25 +46,19 @@ MouseArea {
                         icon:  iconName !== "" ? iconName : "undefined"
                         visible: iconName !== ""
 
-                        state: pulseObject && pulseObject.muted ? QIconItem.DisabledState : QIconItem.ActiveState
+                        state: {
+                            if (shadeIconWhileMuted)
+                                if (pulseObject)
+                                    return pulseObject.muted ? QIconItem.DisabledState : QIconItem.DefaultState
+
+                            return QIconItem.DefaultState ;
+                        }
                         MouseArea {
                             anchors.fill: parent
                             onPressed: pulseObject.muted = !pulseObject.muted
                         }
                     }
 
-                    VolumeIcon {
-                        visible: !clientIcon.visible
-                        Layout.maximumHeight: slider.height
-                        Layout.maximumWidth: slider.height
-                        volume: pulseObject ? pulseObject.volume : -1
-                        muted: pulseObject ? pulseObject.muted : true
-
-                        MouseArea {
-                            anchors.fill: parent
-                            onPressed: pulseObject.muted = !pulseObject.muted
-                        }
-                    }
 
                     PlasmaComponents.Slider {
                         id: slider
@@ -132,7 +127,7 @@ MouseArea {
             }
         }
     }
-    
+
     function setVolume(volume) {
         var device = pulseObject
         if (volume > 0 && muted) {

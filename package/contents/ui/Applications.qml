@@ -33,6 +33,7 @@ ColumnLayout {
                     Layout.alignment: Qt.AlignVCenter
                     pulseObject: PulseObject
                     iconName: IconName
+                    shadeIconWhileMuted: true
                 }
 
                 ExpanderArrow {

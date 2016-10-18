@@ -3,6 +3,8 @@ import QtQuick.Layouts 1.1
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+import '../code/icon.js' as Icon
+
 Item {
     height: content.implicitHeight
     ColumnLayout {
@@ -20,26 +22,15 @@ Item {
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignVCenter
                 pulseObject: sourceModelProxy.defaultSource
-                iconName: "audio-input"
+                iconName: sourceModelProxy.defaultSource ? Icon.inputName(sourceModelProxy.defaultSource.volume, sourceModelProxy.defaultSource.muted) : "undefined";
             }
 
             ExpanderArrow {
                 id: expanderIcon
                 Layout.alignment: Qt.AlignVCenter
 
-                implicitHeight: openSettingsButton.implicitHeight
-                implicitWidth: openSettingsButton.implicitWidth
-            }
-
-            PlasmaComponents.ToolButton {
-                id: openSettingsButton
-
-                iconSource: "configure"
-                tooltip: i18n("Configure Audio Volume...")
-
-                onClicked: {
-                    KCMShell.open(["pulseaudio"])
-                }
+                implicitHeight: units.iconSizes.medium
+                implicitWidth: units.iconSizes.medium
             }
         }
 

@@ -1,5 +1,5 @@
 /*
-    Copyright 2014-2015 Harald Sitter <sitter@kde.org>
+    Copyright 2016 David Rosca <nowrep@gmail.com>
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License as
@@ -19,16 +19,12 @@
 */
 
 import QtQuick 2.0
-import QtQuick.Layouts 1.0
+import org.kde.plasma.configuration 2.0
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-
-import "../code/icon.js" as Icon
-
-PlasmaCore.SvgItem {
-    property int volume
-    property bool muted
-
-    svg: PlasmaCore.Svg { imagePath: "icons/audio" }
-    elementId: Icon.outputName(volume, muted)
+ConfigModel {
+    ConfigCategory {
+         name: i18n("General")
+         icon: "plasma"
+         source: "ConfigGeneral.qml"
+    }
 }
