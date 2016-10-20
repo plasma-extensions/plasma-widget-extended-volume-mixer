@@ -2,6 +2,7 @@ import QtQuick 2.5
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.kquickcontrolsaddons 2.0
 
 import '../code/icon.js' as Icon
 
