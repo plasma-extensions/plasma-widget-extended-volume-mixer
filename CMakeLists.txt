@@ -18,7 +18,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Plasma)
 
 # Add additional libraries
 
-#add_subdirectory(translations)
+add_subdirectory(translations)
 
 file(GLOB_RECURSE QML_SRCS package/*.qml)
 file(GLOB_RECURSE JS_SRCS package/*.js)

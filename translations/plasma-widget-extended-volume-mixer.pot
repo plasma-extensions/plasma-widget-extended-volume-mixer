@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: https://github.com/plasma-extensions/plasma-widget-"
+"extended-volume-mixer/issues\n"
+"POT-Creation-Date: 2016-10-19 20:41-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: package/contents/config/config.qml:26
+msgid "General"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:38
+msgid "Volume"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:46
+msgid "Maximum volume:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:54
+#: package/contents/ui/ConfigGeneral.qml:67
+msgid "%"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:59
+msgid "Volume step:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:75
+msgid "Behavior"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:80
+msgid "Volume feedback"
+msgstr ""
+
+#: package/contents/ui/Inputs.qml:74
+msgid "Inputs"
+msgstr ""
+
+#: package/contents/ui/main.qml:22
+msgid "Audio Volume"
+msgstr ""
+
+#: package/contents/ui/main.qml:38
+msgid ""
+"Volume at %1%\n"
+"%2"
+msgstr ""
+
+#: package/contents/ui/main.qml:209
+msgid "Increase Volume"
+msgstr ""
+
+#: package/contents/ui/main.qml:215
+msgid "Decrease Volume"
+msgstr ""
+
+#: package/contents/ui/main.qml:221
+msgid "Mute"
+msgstr ""
+
+#: package/contents/ui/main.qml:227
+msgid "Increase Microphone Volume"
+msgstr ""
+
+#: package/contents/ui/main.qml:233
+msgid "Decrease Microphone Volume"
+msgstr ""
+
+#: package/contents/ui/main.qml:239
+msgid "Mute Microphone"
+msgstr ""
+
+#: package/contents/ui/Outputs.qml:40
+msgid "Configure Audio Volume..."
+msgstr ""
+
+#: package/contents/ui/Outputs.qml:85
+msgid "Outputs"
+msgstr ""
+
+#: package/contents/ui/VolumeController.qml:123
+#: package/contents/ui/VolumeSlider.qml:98
+msgctxt "volume percentage"
+msgid "%1%"
+msgstr ""
+
+#: package/contents/ui/VolumeSlider.qml:82
+msgid "100%"
+msgstr ""
+
+#: package/contents/ui/VolumeSlider.qml:104
+msgctxt "only used for sizing, should be widest possible string"
+msgid "100%"
+msgstr ""
+
+#: translations/rc.cpp:1 rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#: translations/rc.cpp:2 rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: translations/rc.cpp:3 rc.cpp:3
+msgctxt "HOMEPAGE OF TRANSLATORS"
+msgid "Your homepages"
+msgstr ""
