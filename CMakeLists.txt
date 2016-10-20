@@ -20,4 +20,8 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Plasma)
 
 #add_subdirectory(translations)
 
+file(GLOB_RECURSE QML_SRCS package/*.qml)
+file(GLOB_RECURSE JS_SRCS package/*.js)
+add_custom_target(PackageFiles ALL echo SOURCES ${QML_SRCS} ${JS_SRCS})
+
 plasma_install_package(package org.plasma-light.extended-volume-mixer)
